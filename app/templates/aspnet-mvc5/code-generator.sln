@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "<%= projectName %>", "src\<%= projectName %>\<%= projectName %>.csproj", "<%= projectGuid %>"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C16B3441-DE9F-416D-A0EF-A8CA4345631C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "<%= projectName %>.Tests", "test\<%= projectName %>.Tests\<%= projectName %>.Tests.csproj", "<%= testProjectGuid %>"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{704671D3-9AA5-4AFD-AE79-FF7C25EC397A}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Integration.Live|Any CPU = Integration.Live|Any CPU
+		Release|Any CPU = Release|Any CPU
+		UAT.Live|Any CPU = UAT.Live|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		<%= projectGuid %>.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		<%= projectGuid %>.Debug|Any CPU.Build.0 = Debug|Any CPU
+		<%= projectGuid %>.Integration.Live|Any CPU.ActiveCfg = Integration.Live|Any CPU
+		<%= projectGuid %>.Integration.Live|Any CPU.Build.0 = Integration.Live|Any CPU
+		<%= projectGuid %>.Release|Any CPU.ActiveCfg = Release|Any CPU
+		<%= projectGuid %>.Release|Any CPU.Build.0 = Release|Any CPU
+		<%= projectGuid %>.UAT.Live|Any CPU.ActiveCfg = UAT.Live|Any CPU
+		<%= projectGuid %>.UAT.Live|Any CPU.Build.0 = UAT.Live|Any CPU
+		<%= testProjectGuid %>.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		<%= testProjectGuid %>.Debug|Any CPU.Build.0 = Debug|Any CPU
+		<%= testProjectGuid %>.Integration.Live|Any CPU.ActiveCfg = Integration.Live|Any CPU
+		<%= testProjectGuid %>.Integration.Live|Any CPU.Build.0 = Integration.Live|Any CPU
+		<%= testProjectGuid %>.Release|Any CPU.ActiveCfg = Release|Any CPU
+		<%= testProjectGuid %>.Release|Any CPU.Build.0 = Release|Any CPU
+		<%= testProjectGuid %>.UAT.Live|Any CPU.ActiveCfg = UAT.Live|Any CPU
+		<%= testProjectGuid %>.UAT.Live|Any CPU.Build.0 = UAT.Live|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		<%= testProjectGuid %> = {C16B3441-DE9F-416D-A0EF-A8CA4345631C}
+	EndGlobalSection
+EndGlobal
