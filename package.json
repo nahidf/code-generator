@@ -21,13 +21,16 @@
     "url": "https://github.com/nahidf/code-generator.git"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "yeoman-generator": "^0.19.0",
     "chalk": "^1.0.0",
     "html-wiring": "^1.1.0",
-    "yosay": "^1.0.0"
+    "yosay": "^1.0.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "mocha": "~1.14.0"
@@ -43,5 +46,6 @@
     {
       "type": "MIT"
     }
-  ]
+  ],
+  "snyk": true
 }
